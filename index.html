@@ -28,12 +28,12 @@
     <meta name="theme-color" content="#B5543A" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="מתכונים" />
+    <meta name="apple-mobile-web-app-title" content="קוקבוק" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link rel="apple-touch-icon" href="/cookbook/pwa/apple-touch-icon.png" />
     <script>
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => navigator.serviceWorker.register('/cookbook/sw.js', { scope: '/cookbook/' }));
+        window.addEventListener('load', () => navigator.serviceWorker.register('/cookbook/sw.js', { scope: '/cookbook/', updateViaCache: 'none' }).then((r) => r.update()).catch(() => {}));
       }
     </script>
   </head>
@@ -45,6 +45,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/cookbook/_expo/static/js/web/entry-4bd2936ac009a82f0b9c7329dac23d24.js" defer></script>
+  <script src="/cookbook/_expo/static/js/web/entry-af08d5012f9a3bbf430911b1d6d5ce1d.js" defer></script>
 </body>
 </html>
